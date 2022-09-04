@@ -5,11 +5,10 @@
     background-color: var(--background-color);
     padding: 8px 12px;
     background-color: purple;
-  }
- 
+}
+
 body {
     margin: 0;
-    background-color: seashell;
 }
 
 a {
@@ -22,10 +21,12 @@ a {
     display: flex;
     margin: 0;
     padding-left: 0;
+    transition: ease;
 }
 
 .navbar_menu li {
     padding: 8px 30px;
+    padding-top: calc(0.25em - 1px);
     font-size: 19px;
 }
 
@@ -50,4 +51,115 @@ a {
 h3 {
     font-size: 60px;
     text-align: center;
+}
+
+.main_page {
+    margin: 0, auto;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.main_page h1 {
+    text-align: center;
+    font-size: 20px;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.btn #signin, #signup {
+    margin-right: 40px;
+    margin-top: 40px;
+    background: rgb(6,14,131);
+    background: linear-gradient(0deg, rgba(6,14,131,1) 0%, rgba(12,25,180,1) 100%);
+    border: none;
+    width: 130px;
+    height: 40px;
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-block;
+     box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+     7px 7px 20px 0px rgba(0,0,0,.1),
+     4px 4px 5px 0px rgba(0,0,0,.1);
+    outline: none;
+    background-color: blueviolet;
+}
+
+.container {
+    width: 100%;
+    height: 30vh;
+    position: fixed;
+    bottom: 0px;
+    background: url(./imgs/1024px-Solid_purple.svg.png);
+}
+
+.wave {
+    position: absolute;
+    width: 100%;
+    padding-top: 12%;
+    top: -5px;
+    left: 0;
+    background-image: url(wave.png);
+    background-repeat: repeat-x;
+    background-size: 100%;
+    animation: wave 8s linear infinite;
+  }
+  .wave::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    padding-top: 12%;
+    top: -5px;
+    left: 0;
+    background-image: url(wave.png);
+    background-repeat: repeat-x;
+    background-size: 100%;
+    opacity: .2;
+    animation: wave-reverse 8s linear infinite;
+  }
+  .wave::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    padding-top: 12%;
+    top: -5px;
+    left: 0;
+    background-image: url(wave.png);
+    background-repeat: repeat-x;
+    background-size: 100%;
+    opacity: .8;
+    animation-delay: -4s;
+    animation: wave 16s linear infinite;
+  }
+  @keyframes wave {
+    0% {
+      background-position: 0;
+    }
+    100% {
+      background-position: 100vw;
+    }
+  }
+  @keyframes wave-reverse {
+    0% {
+      background-position: 100vw;
+    }
+    100% {
+      background-position: 0;
+    }
+  }
+  
+#rlarltjs {
+    position: relative;
+    top: -190px;
+    width: 10vh;
 }
