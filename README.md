@@ -1,2 +1,2 @@
 Community and easiest Ryokan view web site
-<img src="./imgs/preview"></img>
+<img src="./imgs/preview.png"></img>
